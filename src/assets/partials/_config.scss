@@ -1,0 +1,27 @@
+// IMPORTS
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700");
+
+// VARIABLES
+$primary-font: 'Roboto Condensed', sans-serif;
+$primary-color: #DAD6D3;
+$background-color: #292929;
+
+// MIXINS
+@mixin trans-ease($duration) {
+  transition: $duration ease;
+}
+
+// PlACEHOLDERS
+
+// GLOBAL
+body {
+  font-family: $primary-font;
+  background-color: $background-color;
+}
+
+.full-width {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial;
+}

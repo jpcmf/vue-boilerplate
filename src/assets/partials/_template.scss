@@ -1,0 +1,125 @@
+// Header
+
+.main-header {
+
+  background-color: $background-color;
+  height: 100px;
+  border: 1px solid blue;
+
+  .logo {
+    // border: 1px solid red;
+    margin-top: 20px;
+
+  }
+
+  .main-menu {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+    ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style-type: none;
+      text-transform: uppercase;
+    }
+
+    a {
+      font-size: 18px;
+      color: $primary-color;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 10px 15px;
+      @include trans-ease(.2s);
+
+      &:hover {
+        text-shadow: 0 0 7px $primary-color;
+      }
+
+    }
+
+  }
+
+  &:after {
+    content: '';
+    height: 4px;
+    width: 320px;
+    display: block;
+    margin: 0 auto;
+    background-color: $primary-color;
+  }
+
+}
+
+// Footer
+
+.main-footer {
+
+  &:before {
+    content: '';
+    height: 4px;
+    width: 320px;
+    display: block;
+    margin: 0 auto;
+    background-color: $primary-color;
+  }
+
+  h4 {
+    color: $primary-color;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  nav {
+
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      list-style-type: none;
+      margin-bottom: 5px;
+
+      a {
+        font-size: 16px;
+        color: $primary-color;
+        text-decoration: none;
+        text-transform: uppercase;
+        position: relative;
+        @include trans-ease(.2s);
+        margin-left: 10px;
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: -7px;
+          top: 0;
+          width: 4px;
+          height: 100%;
+          background-color: $primary-color;
+          @include trans-ease(.2s);
+          opacity: 0;
+        }
+        &:active, &:focus {
+          color: $primary-color;
+        }
+        &:hover {
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+
+    }
+  }
+
+}
+
+// Main
